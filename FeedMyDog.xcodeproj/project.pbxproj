@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F43F414F2020C72100FDC895 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F414E2020C72100FDC895 /* AppDelegate.swift */; };
+		F43F41512020C72100FDC895 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F41502020C72100FDC895 /* ViewController.swift */; };
+		F43F41542020C72100FDC895 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43F41522020C72100FDC895 /* Main.storyboard */; };
+		F43F41562020C72100FDC895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43F41552020C72100FDC895 /* Assets.xcassets */; };
+		F43F41592020C72100FDC895 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43F41572020C72100FDC895 /* LaunchScreen.storyboard */; };
+		F43F41642020C72200FDC895 /* FeedMyDogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F41632020C72200FDC895 /* FeedMyDogTests.swift */; };
+		F43F416F2020C72200FDC895 /* FeedMyDogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F416E2020C72200FDC895 /* FeedMyDogUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F43F41602020C72200FDC895 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F43F41432020C72100FDC895 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F43F414A2020C72100FDC895;
+			remoteInfo = FeedMyDog;
+		};
+		F43F416B2020C72200FDC895 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F43F41432020C72100FDC895 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F43F414A2020C72100FDC895;
+			remoteInfo = FeedMyDog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F43F414B2020C72100FDC895 /* FeedMyDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedMyDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43F414E2020C72100FDC895 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F43F41502020C72100FDC895 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F43F41532020C72100FDC895 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F43F41552020C72100FDC895 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F43F41582020C72100FDC895 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F43F415A2020C72100FDC895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F43F415F2020C72200FDC895 /* FeedMyDogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedMyDogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43F41632020C72200FDC895 /* FeedMyDogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMyDogTests.swift; sourceTree = "<group>"; };
+		F43F41652020C72200FDC895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F43F416A2020C72200FDC895 /* FeedMyDogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedMyDogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43F416E2020C72200FDC895 /* FeedMyDogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMyDogUITests.swift; sourceTree = "<group>"; };
+		F43F41702020C72200FDC895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F43F41482020C72100FDC895 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43F415C2020C72200FDC895 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43F41672020C72200FDC895 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F43F41422020C72100FDC895 = {
+			isa = PBXGroup;
+			children = (
+				F43F414D2020C72100FDC895 /* FeedMyDog */,
+				F43F41622020C72200FDC895 /* FeedMyDogTests */,
+				F43F416D2020C72200FDC895 /* FeedMyDogUITests */,
+				F43F414C2020C72100FDC895 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F43F414C2020C72100FDC895 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F43F414B2020C72100FDC895 /* FeedMyDog.app */,
+				F43F415F2020C72200FDC895 /* FeedMyDogTests.xctest */,
+				F43F416A2020C72200FDC895 /* FeedMyDogUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F43F414D2020C72100FDC895 /* FeedMyDog */ = {
+			isa = PBXGroup;
+			children = (
+				F43F414E2020C72100FDC895 /* AppDelegate.swift */,
+				F43F41502020C72100FDC895 /* ViewController.swift */,
+				F43F41522020C72100FDC895 /* Main.storyboard */,
+				F43F41552020C72100FDC895 /* Assets.xcassets */,
+				F43F41572020C72100FDC895 /* LaunchScreen.storyboard */,
+				F43F415A2020C72100FDC895 /* Info.plist */,
+			);
+			path = FeedMyDog;
+			sourceTree = "<group>";
+		};
+		F43F41622020C72200FDC895 /* FeedMyDogTests */ = {
+			isa = PBXGroup;
+			children = (
+				F43F41632020C72200FDC895 /* FeedMyDogTests.swift */,
+				F43F41652020C72200FDC895 /* Info.plist */,
+			);
+			path = FeedMyDogTests;
+			sourceTree = "<group>";
+		};
+		F43F416D2020C72200FDC895 /* FeedMyDogUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F43F416E2020C72200FDC895 /* FeedMyDogUITests.swift */,
+				F43F41702020C72200FDC895 /* Info.plist */,
+			);
+			path = FeedMyDogUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F43F414A2020C72100FDC895 /* FeedMyDog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F43F41732020C72200FDC895 /* Build configuration list for PBXNativeTarget "FeedMyDog" */;
+			buildPhases = (
+				F43F41472020C72100FDC895 /* Sources */,
+				F43F41482020C72100FDC895 /* Frameworks */,
+				F43F41492020C72100FDC895 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FeedMyDog;
+			productName = FeedMyDog;
+			productReference = F43F414B2020C72100FDC895 /* FeedMyDog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F43F415E2020C72200FDC895 /* FeedMyDogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F43F41762020C72200FDC895 /* Build configuration list for PBXNativeTarget "FeedMyDogTests" */;
+			buildPhases = (
+				F43F415B2020C72200FDC895 /* Sources */,
+				F43F415C2020C72200FDC895 /* Frameworks */,
+				F43F415D2020C72200FDC895 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F43F41612020C72200FDC895 /* PBXTargetDependency */,
+			);
+			name = FeedMyDogTests;
+			productName = FeedMyDogTests;
+			productReference = F43F415F2020C72200FDC895 /* FeedMyDogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F43F41692020C72200FDC895 /* FeedMyDogUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F43F41792020C72200FDC895 /* Build configuration list for PBXNativeTarget "FeedMyDogUITests" */;
+			buildPhases = (
+				F43F41662020C72200FDC895 /* Sources */,
+				F43F41672020C72200FDC895 /* Frameworks */,
+				F43F41682020C72200FDC895 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F43F416C2020C72200FDC895 /* PBXTargetDependency */,
+			);
+			name = FeedMyDogUITests;
+			productName = FeedMyDogUITests;
+			productReference = F43F416A2020C72200FDC895 /* FeedMyDogUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F43F41432020C72100FDC895 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = osApps;
+				TargetAttributes = {
+					F43F414A2020C72100FDC895 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F43F415E2020C72200FDC895 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F43F414A2020C72100FDC895;
+					};
+					F43F41692020C72200FDC895 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F43F414A2020C72100FDC895;
+					};
+				};
+			};
+			buildConfigurationList = F43F41462020C72100FDC895 /* Build configuration list for PBXProject "FeedMyDog" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F43F41422020C72100FDC895;
+			productRefGroup = F43F414C2020C72100FDC895 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F43F414A2020C72100FDC895 /* FeedMyDog */,
+				F43F415E2020C72200FDC895 /* FeedMyDogTests */,
+				F43F41692020C72200FDC895 /* FeedMyDogUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F43F41492020C72100FDC895 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43F41592020C72100FDC895 /* LaunchScreen.storyboard in Resources */,
+				F43F41562020C72100FDC895 /* Assets.xcassets in Resources */,
+				F43F41542020C72100FDC895 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43F415D2020C72200FDC895 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43F41682020C72200FDC895 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F43F41472020C72100FDC895 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43F41512020C72100FDC895 /* ViewController.swift in Sources */,
+				F43F414F2020C72100FDC895 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43F415B2020C72200FDC895 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43F41642020C72200FDC895 /* FeedMyDogTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F43F41662020C72200FDC895 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43F416F2020C72200FDC895 /* FeedMyDogUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F43F41612020C72200FDC895 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F43F414A2020C72100FDC895 /* FeedMyDog */;
+			targetProxy = F43F41602020C72200FDC895 /* PBXContainerItemProxy */;
+		};
+		F43F416C2020C72200FDC895 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F43F414A2020C72100FDC895 /* FeedMyDog */;
+			targetProxy = F43F416B2020C72200FDC895 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F43F41522020C72100FDC895 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F43F41532020C72100FDC895 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F43F41572020C72100FDC895 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F43F41582020C72100FDC895 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F43F41712020C72200FDC895 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F43F41722020C72200FDC895 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F43F41742020C72200FDC895 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FeedMyDog/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.osapps.FeedMyDog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F43F41752020C72200FDC895 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FeedMyDog/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.osapps.FeedMyDog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F43F41772020C72200FDC895 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FeedMyDogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.osapps.FeedMyDogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FeedMyDog.app/FeedMyDog";
+			};
+			name = Debug;
+		};
+		F43F41782020C72200FDC895 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FeedMyDogTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.osapps.FeedMyDogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FeedMyDog.app/FeedMyDog";
+			};
+			name = Release;
+		};
+		F43F417A2020C72200FDC895 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FeedMyDogUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.osapps.FeedMyDogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FeedMyDog;
+			};
+			name = Debug;
+		};
+		F43F417B2020C72200FDC895 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FeedMyDogUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.osapps.FeedMyDogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FeedMyDog;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F43F41462020C72100FDC895 /* Build configuration list for PBXProject "FeedMyDog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43F41712020C72200FDC895 /* Debug */,
+				F43F41722020C72200FDC895 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F43F41732020C72200FDC895 /* Build configuration list for PBXNativeTarget "FeedMyDog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43F41742020C72200FDC895 /* Debug */,
+				F43F41752020C72200FDC895 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F43F41762020C72200FDC895 /* Build configuration list for PBXNativeTarget "FeedMyDogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43F41772020C72200FDC895 /* Debug */,
+				F43F41782020C72200FDC895 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F43F41792020C72200FDC895 /* Build configuration list for PBXNativeTarget "FeedMyDogUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43F417A2020C72200FDC895 /* Debug */,
+				F43F417B2020C72200FDC895 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F43F41432020C72100FDC895 /* Project object */;
+}
