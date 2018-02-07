@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsCell: UITableViewCell {
+class SettingsObjCell: UITableViewCell {
 
     @IBOutlet var settingsLabel: UILabel!
     @IBOutlet var settingsIV: UIImageView!

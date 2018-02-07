@@ -14,34 +14,40 @@ class FeedingsController: UIViewController {
     //feedings store
     var feedingObjStore: FeedingObjStore!
     var feedingsDataSource = FeedingsDataSource()
-
+    @IBOutlet var feedingsTV: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setAppearance()
         feedingsDataSource.feedingStore = self.feedingObjStore
-        tableView.dataSource = feedingsDataSource
+        feedingsTV.dataSource = feedingsDataSource
         setFbListenerOnDateQueries()
+        
+        //if person isn't sed,
+        if PreferencesManager.getInstance().loadPrefs(strKey: AppFinals.KEY_PERSON_FED) == nil{
+            self.performSegue(withIdentifier: "showPersonFed", sender: nil)
+        }
     }
 
     private func setFbListenerOnDateQueries() {
         feedingObjStore.setListenerOnQueries { (saved) -> Void in
             if saved {
                 self.feedingsDataSource.feedingStore = self.feedingObjStore
-                self.tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+                self.feedingsTV.reloadSections(IndexSet(integer: 0), with: .automatic)
             }
         }
     }
 
+
     private func setAppearance() {
         //row height
-        tableView.rowHeight = UIScreen.main.bounds.height/6
-        tableView.estimatedRowHeight = 65
+        self.feedingsTV.rowHeight = UIScreen.main.bounds.height / 6
+        self.feedingsTV.estimatedRowHeight = 65
 
     }
 
-    private let _ALERT_TITLE = "Add Feeding"
-    private let _ALERT_PLACE_HOLDER = "who fed?"
+    private let _ALERT_TITLE = "Add a Feeding"
+    private let _ALERT_CONTENT = "I will add feeding to jesiky today"
     private let _ALERT_POSITIVE_BTN = "Ok"
     private let _ALERT_NEGATIVE_BTN = "Cancel"
     private let _SENDER_ALERT_BOX = "alertBox"
@@ -49,28 +55,20 @@ class FeedingsController: UIViewController {
     //add a row
     @IBAction func addNewDate(_ sender: UIMenuItem) {
 
-        if self.feedingObjStore.objectAlreadySaved() {
-            return
-        }
 
-        var personFed: String?
-        if let name = PreferencesManager.getInstance().loadPrefs(strKey: AppFinals.KEY_PERSON_FED){
-            personFed = name as? String
-        }
-
-        MyUtils.ShowAlertBoxWithInput(viewController: self,
+        MyUtils.ShowChoiceDialog(viewController: self,
                 title: _ALERT_TITLE,
-                inputPlaceHolder: _ALERT_PLACE_HOLDER,
-                input: personFed,
+                content: _ALERT_CONTENT,
                 positiveBtn: _ALERT_POSITIVE_BTN,
-                negativeBtn: _ALERT_NEGATIVE_BTN) { (personFed) -> Void in
-            if let personFed = personFed {
-                PreferencesManager.getInstance().savePrefs(strKey: AppFinals.KEY_PERSON_FED, strVal: personFed)
-                self.feedingObjStore.addFeedingObj(personFed: personFed) { (saved) -> Void in
-                    if saved {
-                        //move to next segue
-                        self.performSegue(withIdentifier: "openDate", sender: self._SENDER_ALERT_BOX)
-                        print("added!")
+                negativeBtn: _ALERT_NEGATIVE_BTN) { (jessikaAte) -> Void in
+            if jessikaAte {
+                if let personFed = PreferencesManager.getInstance().loadPrefs(strKey: AppFinals.KEY_PERSON_FED) as? String {
+                    self.feedingObjStore.addFeedingObj(personFed: personFed) { (saved) -> Void in
+                        if saved {
+                            //move to next segue
+                            self.performSegue(withIdentifier: "openDate", sender: self._SENDER_ALERT_BOX)
+                            print("added as \(personFed)")
+                        }
                     }
                 }
             }
@@ -89,17 +87,23 @@ class FeedingsController: UIViewController {
         case "openDate"?:
             var row: Int = 0
             if sender is UITableViewCell {
-                row = tableView.indexPathForSelectedRow!.row
+                row = feedingsTV.indexPathForSelectedRow!.row
             }
 
             //find the tapped row
-                //find the item associated with the row
-                let clickedDateItem = feedingObjStore.feedingObjList[row]
-                let feedingViewController = segue.destination as! FeedingViewController
-                feedingViewController.dateObj = clickedDateItem
+            //find the item associated with the row
+            let clickedDateItem = feedingObjStore.feedingObjList[row]
+            let feedingViewController = segue.destination as! FeedingViewController
+            feedingViewController.dateObj = clickedDateItem
 
+
+//        case "showSettings":
+//            segue.destination as!
+            
+            
         default:
-            preconditionFailure("what is this segue? for ants?")
+            print("opening somShit")
+//            preconditionFailure("what is this segue? for ants?")
 
         }
 
@@ -108,7 +112,7 @@ class FeedingsController: UIViewController {
     //will be called after come back from navigation and on start
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
+        feedingsTV.reloadData()
     }
 
 }

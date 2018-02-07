@@ -29,8 +29,8 @@ final class StatusBarGradientColor: UINavigationBar {
         gradient.zPosition = -1
         //gradient.frame = frame
 
-        gradient.startPoint = CGPoint(x: 0, y: 1)
-        gradient.endPoint = CGPoint(x: 1, y: 0)
+        gradient.startPoint = CGPoint(x: 0.5, y: 1)
+        gradient.endPoint = CGPoint(x: 0.5, y: 0)
 
         layer.addSublayer(gradient)
     }

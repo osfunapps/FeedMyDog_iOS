@@ -3,8 +3,9 @@
 // Copyright (c) 2018 osApps. All rights reserved.
 //
 
-protocol DataModelDelegate: class {
+import UIKit
 
-    func didRecieveDataUpdate(data: String)
+protocol ControllerRequestDelegate: class {
 
+    func getController()
 }

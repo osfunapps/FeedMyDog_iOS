@@ -11,7 +11,6 @@ import UIKit
 class FeedingObjCell: UITableViewCell {
 
     @IBOutlet var feedingIndicationIV: UIImageView!
-    @IBOutlet var iv: UIImageView!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var personFedLabel: UILabel!
     

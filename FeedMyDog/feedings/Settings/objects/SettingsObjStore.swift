@@ -5,32 +5,32 @@
 
 import UIKit
 
-class PersonObjStore: NSObject {
+class SettingsObjStore: NSObject {
 
-    var personObjList = [PersonObj]()
+    var settingsObjList = [SettingsObj]()
 
 
     func setListenerOnQueries(completion: @escaping (Bool) -> Void) {
         //get all of the information from firebase
-        FirebaseHandler.loadFbDocumentsOnce(path: FirebaseFinals.REF_SETTINGS_PERSONS) { (firebaseLoadResult) -> Void in
+        FirebaseHandler.loadCollectionOnce(path: FirebaseFinals.REF_COLLECTION_SETTINGS) { (firebaseLoadResult) -> Void in
             switch firebaseLoadResult {
             case let .success(queryDocument):
-                self.personObjList.removeAll()
+                self.settingsObjList.removeAll()
                 for specificDateQuery in queryDocument {
-                    let personObj = SettingsObj()
+                    let settingsObj = SettingsObj()
 
                     //see the objects here!
-                    personObj.name = specificDateQuery.documentID
-                  /*  for (key, value) in specificDateQuery.data() {
-                        if key == FirebaseFinals.REF_PERSON_FED {
-                            personObj.personFed = (value as! String)
-                        }
-                    }*/
-                    self.personObjList.append(personObj)
+                    settingsObj.name = specificDateQuery.documentID
+                    /*  for (key, value) in specificDateQuery.data() {
+                          if key == FirebaseFinals.REF_PERSON_FED {
+                              settingsObj.personFed = (value as! String)
+                          }
+                      }*/
+                    self.settingsObjList.append(settingsObj)
                 }
 
                 //sort alphabetically
-                self.personObjList = self.personObjList.sorted(by: {$0.name < $1.name } )
+                self.settingsObjList = self.settingsObjList.sorted(by: { $0.name < $1.name })
                 completion(true)
 
             case .failure(_):

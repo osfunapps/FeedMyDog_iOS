@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PersonObjCell: UITableViewCell {
+class WhoYouObjCell: UITableViewCell {
 
     @IBOutlet var personIV: UIImageView!
     @IBOutlet var personNameLabel: UILabel!

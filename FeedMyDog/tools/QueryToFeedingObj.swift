@@ -4,3 +4,10 @@
 //
 
 import Foundation
+import FirebaseFirestore
+
+class QueryToFeedingObj {
+
+
+}
+

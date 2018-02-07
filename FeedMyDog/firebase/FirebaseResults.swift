@@ -4,3 +4,26 @@
 //
 
 import Foundation
+import Firebase
+
+
+enum FireStoreCollectionLoadResult {
+    case success([QueryDocumentSnapshot])
+    case failure(Error)
+}
+
+enum FireStoreDocumentLoadResult {
+    case success(DocumentSnapshot)
+    case failure(Error)
+}
+
+enum FireStoreSaveResult {
+    case success(FeedingObj)
+    case failure(Error)
+}
+
+enum FireStoreQueriesToObjResult {
+    case success([FeedingObj])
+    case failure(Error)
+}
+

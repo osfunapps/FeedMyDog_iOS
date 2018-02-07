@@ -5,11 +5,21 @@
 
 import Foundation
 
-public class ResourcesBank {
+public class AppFinals {
 
-    //static
+
+    //preferences file
+    public static let KEY_PERSON_FED: String = "personFed"
+
+    static let _INFORMATION_DIALOG_TITLE = "Person Changed"
+    static let _OK = "Ok"
+    static let _INFORMATION_DIALOG_CONTENT = "Congrats. You are now "
+
+
+    //resources bank
     public static let FED_NO: String = "fed_no"
     public static let FED_YES: String = "fed_yes"
     public static let OZ: String = "Oz"
+
 
 }

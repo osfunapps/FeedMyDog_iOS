@@ -5,43 +5,28 @@
 
 import UIKit
 
-class WhoYouDataSource: NSObject, UITableViewDataSource {
+class SettingsDataSource: NSObject, UITableViewDataSource {
 
-    var personStore: PersonObjStore?
+    var settingsStore: SettingsObjStore?
 
     //append values, one by one
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell", for: indexPath) as! PersonObjCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsObjCell", for: indexPath) as! SettingsObjCell
 
-        let personObj = personStore!.personObjList[indexPath.row]
+        let settingsObj = settingsStore!.settingsObjList[indexPath.row]
 
         //name and description
 
-        cell.personNameLabel.text = personObj.name.firstUpperCased
-        if let personDescription =  personObj.pDescription {
-            cell.personDescriptionLabel.text = personDescription
-        }
 
-        //image
-        cell.personIV.image = UIImage(named: personObj.name)
-
+        cell.settingsLabel.text = settingsObj.name.replacingOccurrences(of: "_", with: " ").capitalized
+        cell.settingsIV.image = UIImage(named: settingsObj.name)
         return cell
     }
 
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return personStore!.personObjList.count
-    }
-
-}
-
-
-//first letter upper case handling
-extension String {
-    var firstUpperCased: String{
-        guard let first = first else {return ("")}
-        return String(first).uppercased() + dropFirst()
+        return settingsStore!.settingsObjList.count
     }
 
 }

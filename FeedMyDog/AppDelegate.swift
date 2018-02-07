@@ -7,15 +7,28 @@
 //
 
 import UIKit
+import Firebase
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //start Firebase and load db
+        FirebaseInitiator.configureFirebase()
+        //find the right storyboard
+        let navigationController = window!.rootViewController as! UINavigationController
+        let feedingsViewController = navigationController.topViewController as! FeedingsController
+
+        //set the store
+        feedingsViewController.feedingObjStore = FeedingObjStore()
+        
+        
+        //fetch in the background
         return true
     }
 

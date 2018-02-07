@@ -12,8 +12,9 @@ import UIKit
 class WhoYouController: UIViewController {
 
     //feedings store
-    var personsStore: PersonObjStore!
+    var personsStore: PersonObjStore = PersonObjStore()
     var whoYouDataSource = WhoYouDataSource()
+
     @IBOutlet var personsTV: UITableView!
     
     override func viewDidLoad() {
@@ -21,11 +22,13 @@ class WhoYouController: UIViewController {
         self.setAppearance()
         whoYouDataSource.personStore = self.personsStore
         personsTV.dataSource = whoYouDataSource
+        personsTV.delegate = whoYouDataSource
         setFbListenerOnDateQueries()
+
     }
 
     private func setFbListenerOnDateQueries() {
-        personsStore.setListenerOnQueries { (saved) -> Void in
+        personsStore.loadDocumentOnce{ (saved) -> Void in
             if saved {
                 self.whoYouDataSource.personStore = self.personsStore
                 self.personsTV.reloadSections(IndexSet(integer: 0), with: .automatic)
@@ -46,6 +49,10 @@ class WhoYouController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         personsTV.reloadData()
+    }
+
+    func requestController(completion: ((UIViewController) -> Void)) {
+        completion(self)
     }
 
 }

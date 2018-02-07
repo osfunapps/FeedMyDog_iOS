@@ -5,19 +5,9 @@
 
 import Foundation
 
-class PersonObj: NSObject {
+class SettingsObj: NSObject {
 
     private var _name: String!
-    private var _description: String?
-
-    var pDescription: String? {
-        get {
-            return _description
-        }
-        set {
-            _description = newValue
-        }
-    }
 
     var name: String {
         get {

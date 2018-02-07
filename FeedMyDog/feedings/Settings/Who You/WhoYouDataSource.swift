@@ -5,14 +5,14 @@
 
 import UIKit
 
-class WhoYouDataSource: NSObject, UITableViewDataSource {
+class WhoYouDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
 
     var personStore: PersonObjStore?
 
     //append values, one by one
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell", for: indexPath) as! PersonObjCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WhoYouObjCell", for: indexPath) as! WhoYouObjCell
 
         let personObj = personStore!.personObjList[indexPath.row]
 
@@ -32,6 +32,23 @@ class WhoYouDataSource: NSObject, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return personStore!.personObjList.count
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let personObjList = personStore?.personObjList, let parentController =  tableView.parentViewController else {
+            return
+        }
+
+        let selectedPersonObj = personObjList[indexPath.row]
+
+        //save the new person in settings
+        PreferencesManager.getInstance().savePrefs(strKey: AppFinals.KEY_PERSON_FED, strVal: selectedPersonObj.name)
+
+            MyUtils.ShowInformationDialog(
+                    viewController: parentController,
+                    title: AppFinals._INFORMATION_DIALOG_TITLE,
+                    content: AppFinals._INFORMATION_DIALOG_CONTENT + selectedPersonObj.name,
+                    naturalBtn: AppFinals._OK){(clickedFine) -> Void in }
     }
 
 }

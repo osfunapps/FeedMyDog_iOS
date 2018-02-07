@@ -10,27 +10,26 @@ import Foundation
 import UIKit
 
 @IBDesignable
-final class GardientView: UINavigationBar {
+final class GradientView: UINavigationBar {
 
     //storyboard colors
     @IBInspectable var startColor: UIColor = UIColor.clear
     @IBInspectable var endColor: UIColor = UIColor.clear
 
-    //statics
-    private let _STATUS_BAR_HEIGHT = 20
 
     override func draw(_ rect: CGRect) {
         let gradient: CAGradientLayer = CAGradientLayer()
         gradient.colors = [startColor.cgColor, endColor.cgColor]
-        gradient.frame = CGRect(x: CGFloat(0),
-                y: CGFloat(-_STATUS_BAR_HEIGHT),
+        gradient.frame = CGRect(
+                x: 0,
+                y: 0,
                 width: rect.width,
-                height: rect.height + CGFloat(_STATUS_BAR_HEIGHT))
+                height: rect.height)
         gradient.zPosition = -1
-        //gradient.frame = frame
 
-        gradient.startPoint = CGPoint(x: 0, y: 1)
-        gradient.endPoint = CGPoint(x: 1, y: 0)
+        //
+        gradient.startPoint = CGPoint(x: 0.5, y: 1)
+        gradient.endPoint = CGPoint(x: 0.5, y: 0)
 
         layer.addSublayer(gradient)
     }

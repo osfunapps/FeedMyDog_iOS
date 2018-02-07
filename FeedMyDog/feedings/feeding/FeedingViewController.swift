@@ -7,33 +7,33 @@ import UIKit
 
 class FeedingViewController: UIViewController {
 
+    //views
+    @IBOutlet var dateLabel: UILabel!
     @IBOutlet var fedByLabel: UILabel!
-    @IBOutlet var fedByTF: UITextField!
     @IBOutlet var jessikaIV: UIImageView!
 
-    var dateObj: FeedingObj! {
-        didSet {
-            navigationItem.title = dateObj!.date
-        }
+    //statics
+    private let _DATE_PREFIX = "in "
+    private let _DATE_SUFFIX = "."
+    private let _FED_PREFIX = "Jessika fed by "
+    private let _FED_SUFFIX = ","
+    private let _FED_NOBODY = "Nobody fed Jessika"
 
-    }
+    //feeding obj
+    var dateObj: FeedingObj!
+
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        dateLabel.text = _DATE_PREFIX + dateObj!.date + _DATE_SUFFIX
         if let personFed = dateObj.personFed {
-            jessikaIV.image = UIImage(named: AppFinals.FED_YES)
-            fedByTF.text = personFed
-            hideViews(false)
+            jessikaIV.image = UIImage(named: personFed.lowercased())
+            fedByLabel.text = _FED_PREFIX + personFed + _FED_SUFFIX
         } else {
             jessikaIV.image = UIImage(named: AppFinals.FED_NO)
-            hideViews(true)
+            fedByLabel.text = _FED_NOBODY + _FED_SUFFIX
         }
 
-    }
-
-    private func hideViews(_ show: Bool) {
-        fedByLabel.isHidden = show
-        fedByTF.isHidden = show
     }
 }
